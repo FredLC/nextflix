@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Banner from "../components/banner/banner";
+import NavBar from "../components/nav/navbar";
 
 export default function Home() {
   return (
@@ -12,9 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>Nextflix</h1>
-
-      {/* <NavBar /> */}
+      <NavBar username="joe@joe.com" />
       <Banner
         title="Back to the future"
         subtitle="A classic from the 80's"
