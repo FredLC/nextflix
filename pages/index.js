@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Banner from "../components/banner/banner";
 import NavBar from "../components/nav/navbar";
+import Card from "../components/card/card";
 
 export default function Home() {
   return (
@@ -19,7 +20,9 @@ export default function Home() {
         subtitle="A classic from the 80's"
         imgUrl="/static/back_to_the_future.jpg"
       />
-      {/* <Card /> */}
+      <Card imgUrl="/static/back_to_the_future.jpg" size="large" />
+      <Card imgUrl="/static/back_to_the_future.jpg" size="medium" />
+      <Card imgUrl="/static/back_to_the_future.jpg" size="small" />
     </div>
   );
 }

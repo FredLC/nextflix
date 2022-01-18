@@ -1,9 +1,7 @@
 import styles from "./banner.module.css";
 import Image from "next/image";
 
-const Banner = (props) => {
-  const { title, subtitle, imgUrl } = props;
-
+const Banner = ({ title, subtitle, imgUrl }) => {
   const handleOnPlay = () => {
     console.log("Play!");
   };
