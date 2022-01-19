@@ -4,8 +4,21 @@ import styles from "../styles/Home.module.css";
 import Banner from "../components/banner/banner";
 import NavBar from "../components/nav/navbar";
 import Card from "../components/card/card";
+import SectionCards from "../components/card/section-cards";
 
 export default function Home() {
+  const disneyVideos = [
+    {
+      imgUrl: "/static/back_to_the_future.jpg",
+    },
+    {
+      imgUrl: "/static/back_to_the_future.jpg",
+    },
+    {
+      imgUrl: "/static/back_to_the_future.jpg",
+    },
+  ];
+
   return (
     <div className={styles.container}>
       <Head>
@@ -20,9 +33,10 @@ export default function Home() {
         subtitle="A classic from the 80's"
         imgUrl="/static/back_to_the_future.jpg"
       />
-      <Card imgUrl="/static/back_to_the_future.jpg" size="large" />
-      <Card imgUrl="/static/back_to_the_future.jpg" size="medium" />
-      <Card imgUrl="/static/back_to_the_future.jpg" size="small" />
+
+      <div className={styles.sectionWrapper}>
+        <SectionCards title="Disney" videos={disneyVideos} size="large" />
+      </div>
     </div>
   );
 }
