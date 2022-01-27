@@ -34,7 +34,7 @@ export default function Home({
       <div className={styles.main}>
         <NavBar username="joe@joe.com" />
         <Banner
-          videoId="FWG3Dfss3Jc"
+          videoId="T_WSXXPQYeY"
           title="Back to the future"
           subtitle="A classic from the 80's"
           imgUrl="/static/back_to_the_future.jpg"
