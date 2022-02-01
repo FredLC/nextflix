@@ -5,6 +5,7 @@ import Banner from "../components/banner/banner";
 import NavBar from "../components/nav/navbar";
 import SectionCards from "../components/card/section-cards";
 import { getVideos, getPopularVideos } from "../lib/videos";
+import { startFetchMyQuery } from "../lib/db/hasura";
 
 export async function getServerSideProps() {
   const surfingVideos = await getVideos("surfing");
@@ -23,6 +24,8 @@ export default function Home({
   popularVideos,
   cookingVideos,
 }) {
+  startFetchMyQuery();
+
   return (
     <div className={styles.container}>
       <Head>
