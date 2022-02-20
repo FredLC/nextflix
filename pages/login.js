@@ -43,7 +43,6 @@ const Login = () => {
 
           const loggedInResponse = await response.json();
           if (loggedInResponse.done) {
-            console.log({ loggedInResponse });
             router.push("/");
           } else {
             setIsLoading(false);
@@ -51,7 +50,7 @@ const Login = () => {
           }
         }
       } catch (err) {
-        console.log("Something went wrong with your magic link: ", err);
+        console.error("Something went wrong with your magic link: ", err);
         setIsLoading(false);
       }
     } else {

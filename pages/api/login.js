@@ -9,7 +9,6 @@ export default async function (req, res) {
       const auth = req.headers.authorization;
       const didToken = auth ? auth.substr(7) : "";
       const metaData = await magicAdmin.users.getMetadataByToken(didToken);
-      console.log({ metaData });
 
       const token = jwt.sign(
         {

@@ -47,7 +47,6 @@ const Video = ({ video }) => {
   useEffect(async () => {
     const response = await fetch(`/api/stats?videoId=${videoId}`);
     const data = await response.json();
-    console.log({ data });
 
     if (data.length > 0) {
       const favorited = data[0].favorited;
@@ -82,7 +81,6 @@ const Video = ({ video }) => {
 
     const favorited = value ? 1 : 0;
     const response = await runRatingService(favorited);
-    console.log("data", await response.json());
   };
 
   const handleToggleDislike = async () => {
@@ -92,7 +90,6 @@ const Video = ({ video }) => {
 
     const favorited = value ? 0 : 1;
     const response = await runRatingService(favorited);
-    console.log("data", await response.json());
   };
 
   return (
