@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import styles from "../styles/Login.module.css";
 import { useRouter } from "next/router";
 import { magic } from "../lib/magic-client";
+import Link from "next/link";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -74,16 +75,18 @@ const Login = () => {
 
       <header className={styles.header}>
         <div className={styles.headerWrapper}>
-          <a href="/" className={styles.logoLink}>
-            <div className={styles.logoWrapper}>
-              <Image
-                src="/static/netflix.svg"
-                alt="Netflix logo"
-                width="128px"
-                height="34px"
-              />
-            </div>
-          </a>
+          <Link href="/">
+            <a className={styles.logoLink}>
+              <div className={styles.logoWrapper}>
+                <Image
+                  src="/static/netflix.svg"
+                  alt="Netflix logo"
+                  width="128px"
+                  height="34px"
+                />
+              </div>
+            </a>
+          </Link>
         </div>
       </header>
 

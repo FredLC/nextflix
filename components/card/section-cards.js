@@ -21,6 +21,7 @@ const SectionCards = ({
               size={size}
               videoId={video.id}
               shouldScale={shouldScale}
+              key={idx}
             />
           );
         })}
