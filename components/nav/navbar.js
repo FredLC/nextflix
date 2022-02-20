@@ -8,16 +8,18 @@ import { magic } from "../../lib/magic-client";
 const NavBar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [username, setUsername] = useState("");
+  const [didToken, setDidToken] = useState("");
 
   const router = useRouter();
 
   useEffect(async () => {
     try {
-      const { email, issuer } = await magic.user.getMetadata();
+      const { email } = await magic.user.getMetadata();
       const didToken = await magic.user.getIdToken();
 
       if (email) {
         setUsername(email);
+        setDidToken(didToken);
       }
     } catch (error) {
       console.error("Error retrieving user email: ", error);
